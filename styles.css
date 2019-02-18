@@ -1,0 +1,109 @@
+/** Primary Formatting for Tags 365d8a **/
+
+body {
+	background-color: #365d8a;
+	font-family: Georgia;
+	margin-left: 8%
+}
+
+h1 {
+	font-size: 1.75em;
+}
+
+h6 {
+	font-size: 1em;
+	margin-top: 1%;
+	margin-bottom: 0;
+}
+
+/** Classes **/
+
+/** Controls the look of the list items in the steps for various values. **/
+li.step {
+	list-style-type: none;
+	margin-bottom: 1%;
+	width: 90%;
+}
+
+li.step:hover {
+	background-color: #dfdfdf;
+}
+
+.banner {
+	background-color: #d38647;
+	cursor: pointer;
+	font-family: Georgia;
+	font-size: 1.75em;
+	font-weight: bold;
+	margin-bottom: 1%;
+	padding: 1% 0 1% 1.5%;
+	text-align: left;
+	width: 89.4%;
+}
+
+/** The look of the key menu **/
+.keylist {
+	background-color: #efefef;
+	float: left;
+	margin-right: 1%;
+	padding-left: 1.6%; /** Affects .key width **/
+	padding-bottom: 2%;
+	width: 20%;
+}
+
+.key_list_title {
+	font-size: 1.5em;
+	text-align: left;
+	width: 90%;
+}
+
+/** The default look of the keys. **/
+.key {
+	background-color: #dfdfdf;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	display: block;
+	margin-bottom: 2.5%;
+	outline: none;
+	font-family: Georgia;
+	font-size: 0.9em;
+	padding: 5%;
+	text-align: left;
+	width: 90%; /** Affects .keylist padding-left **/
+}
+
+/** The look of the key when it is clicked. **/
+.key:active {
+	background-color: #00000;
+}
+
+/** The look of the keys when they are being hovered upon. **/
+.key:hover {
+	background-color: #2b7f7f;
+	box-shadow: 5px 5px 3px grey;
+	color: white;
+	transform: scale(1.05);
+}
+
+/** Styles the default value. **/
+.landing_page {
+	background-color: #efefef;
+	float: left;
+	padding-left: 1.6%;
+	width: 65%;
+}
+
+/** Creates a round border. **/
+.round {
+	border: solid black 1px;
+	border-radius: 15px;
+}
+
+/** The default look of a value. **/
+.value {
+	background-color: #efefef;
+	float: left;
+	padding-left: 1.6%;
+	width: 65%;
+}

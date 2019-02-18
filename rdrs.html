@@ -1,0 +1,220 @@
+<!doctype html>
+
+	<head>
+		<title>Room Reference and Documentation Sheet</title>
+		<link rel="stylesheet" href="styles.css" />
+		<style></style>
+		
+		<!-- Javascript required for page functionality. -->
+		<script>
+			<!-- Hides all value elements -->
+			function hideAll() {
+				var i, values, keys;
+				
+				values = document.getElementsByClassName("value");
+				for (i = 0; i < values.length; i++) {
+					values[i].style.display = "none";
+				}
+			}
+		
+			<!-- Toggles between event pages. -->
+			function openKey(evt, value) {
+				var i, values, keys;
+				
+				hideAll();
+				
+				keys = document.getElementsByClassName("key");
+				for (i = 0; i < keys.length; i++) {
+					keys[i].className = keys[i].className.replace(" active", "");
+				}
+				
+				document.getElementById("landing_page").style.display = "none";
+				
+				document.getElementById(value).style.display = "block";
+				evt.currentTarget.className += " active";				
+			}
+			
+			<!-- Shows the landing page -->
+			function showLanding() {
+				document.getElementById("landing_page").style.display = "block";
+				hideAll();
+			}
+			
+		</script>
+	</head>
+
+<!-- 
+
+Adding New Entries to the Page:
+	<button class="key" onmouseover="openKey(event, 'EVENT_NAME')">EVENT_TITLE</button>
+	<div id="EVENT_NAME" class=value round></div>
+
+-->
+
+	<body>
+		<!-- Banner at the top of the page. -->
+		<div  id="banner">
+			<button class="banner round" onmousedown="showLanding()">Room Reference and Documentation Sheet</h1>
+		</div>
+		
+		<!-- The list of keys on the left side of the page. -->
+		<div class="keylist round" id="keys">
+			<h1 class="key_list_title">Issue or Topic</h1>
+			<button class="key" onmouseover="openKey(event, 'nec_filter')">Clean an (NEC) Projector Filter</button>
+			<button class="key" onmouseover="openKey(event, 'setup_webex')">Set up a Web-ex Call</button>
+			<button class="key" onmouseover="openKey(event, 'swap_proj')">Swap a Projector Out</button>
+			<button class="key" onmouseover="openKey(event, 'update_proj_firmware')">Update Projector Firmware</button>
+			<button class="key" onmouseover="openKey(event, 'update_settings')">Update Settings on a Computer</button>
+		</div>
+		
+		<!-- The values for each of the related keys. -->
+		<div id="landing_page" class="landing_page round">
+			<h1>Needing a refresher on a topic?</h1>
+			<p>This page is intended to serve as a reference for various issues. Hover over a topic to pull up notes and/or procedures.</p>
+			<h6>Here are a few additional issues to keep in mind.</h6>
+			
+			<!-- Here are the additional notes for the landing page. -->
+			<ul>
+				<li class="step">Panasonic RZ370 Projects should be running firmware version 3.14. Check for this before swapping one out.</li>
+				<li class="step">To make resolution changes to OSX, use the packages provided on the USB stick.</li>
+			</ul>
+		</div>
+		
+		<!-- Here are all of the values for the keys. -->
+		<div id="nec_filter" class="value round">
+			<h1>How to Clean (or replace) an (NEC) Projector </h1>
+			<p><em>Estimated Time: 5-10 mins.</em></p>
+			<p><strong>Note:</strong> After physically cleaning or replacing the filter, you must reset the filter hours on the projector.</p>
+			<h6>Cleaning the filter</h6>
+			<ul>
+				<li class="step">Remove the filter covers on the side of the projector.</li>
+				<li class="step">Remove the filter from the cover.</li>
+				<li class="step">Beat the dust from the filters into a trash can.</li>
+				<li class="step">Place the filters back onto the covers.</li>
+				<li class="step">Place the covers with the filters back onto the projector.</li>
+				<li class="step">See below to refer how to reset the filter hours on the projector.</li>
+			</ul>
+			<h6>Replacing the filter</h6>
+			<ul>
+				<li class="step">Remove the filter covers on the side of the projector.</li>
+				<li class="step">Remove the filter from the cover.</li>
+				<li class="step">Discard of the old filters into the trash.</li>
+				<li class="step">Cut out new filters that will fit the covers.</li>
+				<li class="step">Place the filters back onto the covers.</li>
+				<li class="step">Place the covers with the filters back onto the projector.</li>
+				<li class="step">See below to refer how to reset the filter hours on the projector.</li>
+			</ul>
+			<h6>Resetting the filter hours on the projector</h6>
+			<ul>
+				<li class="step">Hit <em>Menu</em> on the NEC Projector remote.</li>
+				<li class="step">Use the remote to navigate to <em>Reset</em> and hit Enter.</li>
+				<li class="step">Use the remote to navigate to <em>Filter Hours</em> and hit Enter.</li>
+				<li class="step">Use the remote to confirm the action.</li>
+				<li class="step">Hit <em>Exit</em> on the remote until the menu is gone.</li>
+			</ul>
+		</div>
+		
+		<div id="setup_webex" class="value round">
+			<h1>Setting-Up a Web-ex Call</h1>
+			<p><em>Estimated Time: 5-10 mins.</em></p>
+			<p><strong>Note:</strong> To use Web-ex in HDB 1.208, you must have X-Panel installed.</p>
+			<p><strong>Note:</strong> To share content in HLB 1.111, you must press Share Local Content.</p>
+			<h6>Getting the Call Started</h6>
+			<ul>
+				<li class="step">Press the Video Conference call on the touchpanel or X-Panel.</li>
+				<li class="step">Obtain the number to call in to the meeting.</li>
+				<li class="step">Type in the number to the proper field and add @dellmed... <em>(Typing @ should autopopulate.)</em></li>
+				<li class="step"><em>Audio should naturally be synced up with the mics.</em></li>
+			</ul>
+			<h6>To Set-up Sharing a Source</h6>
+			<ul>
+				<li class="step">Press the Share button on the touchpanel or X-Panel.</li>
+				<li class="step">Select which source should be shared.</li>
+			</ul>
+			<h6>Adjusting the Layout and Camera Angle</h6>
+			<ul>
+				<li class="step">Use the remote and select the layout or camera angle button in the top right corner.</li>
+			</ul>
+		</div>
+		
+		<div id="swap_proj" class="value round">
+			<h1>How to Swap Out a Projector</h1>
+			<p><em>Estimated Time: 45 mins - 1 hour</em></p>
+			<p><strong>Note:</strong> The projector you are replacing should be the same model as the replacement.</p>
+			<h6>Removing the Old Projector</h6>
+			<ul>
+				<li class="step">Turn off the system and the projector.</li>
+				<li class="step">Use the remote and take a picture of the network settings of the projector.</li>
+				<li class="step">Remove network and power cables from the projector.</li>
+				<li class="step">Unscrew the mount and carefully lower the projector from the ceiling.</li>
+				<li class="step">Remove the mount from the old projector.</li>
+			</ul>
+			<h6>Mounting the new Projector</h6>
+			<ul>
+				<li class="step">Place the mount onto the new projector.</li>
+				<li class="step">Screw the mount back carefully into the ceiling.</li>
+				<li class="step">Insert the power and network cables into the new projector.</li>
+				<li class="step">Aim the projector with an appropriate test pattern.</li>
+				<li class="step">Configure the network settings so the old projector has the same info as the old one.</li>
+			</ul>
+		</div>
+		
+		<div id="update_proj_firmware" class="value round">
+			<h1>How to Update Projector Software</h1>
+			<p><em>Estimated Time: 25-30 mins.</em></p>
+			<p><strong>Note:</strong> Check the Firmware by <em>Menu > Status > Projector Set-up.</em></p>
+			<h6>Preparing the Update</h6>
+			<ul>
+				<li class="step">Put the projector into stand-by mode.</li>
+				<li class="step">Connect the projector to a computer via a RS232-USB cable.</li>
+				<li class="step">Download (or open) the MainSubNet Update Tool from the projector's service home page.</li>
+				<li class="step">Download the appropriate image for the projector.</li>
+			</ul>
+			<h6>Updating the Projector</h6>
+			<ul>
+				<li class="step">Start-up the software with a computer, select Model, and then click <strong>[OK]</strong>.</li>
+				<li class="step">Select the Serial Radio Button.</li>
+				<li class="step">Enter the data for the ID, Port, Baudrate, and Parity.</li>
+				<li class="step">Check the connection with <strong>[Connection Check].</strong></li>
+				<li class="step">Verify the results of the connection check. If failed, verify the data.</li>
+				<li class="step">Select the Microprocessor to update, and click <strong>[Load]</strong>.</li>
+				<li class="step">Load in the proper image for the projector.</li>
+				<li class="step">Press update to begin the process. <em>(This step takes around 10-15 mins.)</em></li>
+				<li class="step">Press <strong>[OK]</strong> on the completion screen.</li>
+				<li class="step">Press <strong>[Exit]</strong> once the update has finished.</li>
+				<li class="step">Reboot the projector and confirm the Microprocessor updated.</li>
+			</ul>
+		</div>
+
+		<div id="update_settings" class="value round">
+			<h1>Update Settings on a Computer</h1>
+			<p><em>Estimated Time: 10-15 mins.</em></p>
+			<p><strong>Note:</strong> To make resolution changes to OSX, use the packages provided on the USB stick.</p>
+			<h6>Log in to Stache</h6>
+			<ul>
+				<li class="step">Log in to <a href="https://stache.utexas.edu/login" target="_blank">Stache</a> - if needed.</li>
+			</ul>
+			<h6>Update Settings on Mac Side</h6>
+				<ul>
+					<li class="step">Log-in with atsadmin.</li>
+					<li class="step">Open up Deep Freeze and log-in with atsadmin.</li>
+					<li class="step">Reboot the computer thawed - if needed.</li>
+					<li class="step">Re-open Deep Freeze - if needed.</li>
+					<li class="step">Update the desired settings.</li>
+					<li class="step">Apply the settings in Deep Freeze.</li>
+					<li class="step">Select to boot frozen.</li>
+					<li class="step">Reboot the computer.</li>
+				</ul>
+			<h6>Update Settings on PC Side</h6>
+				<ul>
+					<li class="step">Log-in with .\atsadmin.</li>
+					<li class="step">Update the desired settings.</li>
+					<li class="step">Reboot the computer.</li>
+				</ul>
+		</div>
+
+
+		<!-- Hide all of the value elements on initial start up. -->
+		<script> hideAll(); </script>
+	</body>
+</html>
